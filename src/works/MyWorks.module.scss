@@ -1,5 +1,7 @@
+@import "../common/styles/sass/variables";
+
 .myWorksBlock {
-  background-color: #4f4f4f;
+  background-color: $secondBgColor;
   padding: 100px 0;
 
   .skillsContainer {

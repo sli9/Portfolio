@@ -1,9 +1,11 @@
+@import "../../styles/sass/variables";
+
 .title {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 45px;
   margin: 0;
-  color: #aaaaaa;
+  color: $textColor;
   text-transform: uppercase;
   position: relative;
 
@@ -12,7 +14,7 @@
     position: absolute;
     width: 70px;
     height: 5px;
-    background-color: #ee6817;
+    background-color: $accentColor;
     left: 0;
     bottom: -20px;
   }

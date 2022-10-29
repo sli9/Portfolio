@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Main.module.css"
-import container from "../common/styles/ContainerStyle.module.css"
+import container from "../common/styles/ContainerStyle.module.scss"
 
 const Main = () => {
     return <div className={style.mainBlock}>

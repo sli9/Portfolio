@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Conacts.module.css"
-import container from "../common/styles/ContainerStyle.module.css"
+import container from "../common/styles/ContainerStyle.module.scss"
 
 const Contacts = () => {
     return <div className={`${style.freelance} ${container.container}`}>

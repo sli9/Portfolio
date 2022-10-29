@@ -1,14 +1,10 @@
 import React from "react";
 import style from "./Footer.module.css"
-import container from "../common/styles/ContainerStyle.module.css"
+import container from "../common/styles/ContainerStyle.module.scss"
 
-type PropsType = {
-    title: string
-    description: string
-    img: string
-}
 
-const Footer = (props: PropsType) => {
+
+const Footer = () => {
     return <div className={`${style.myWorkBlock} ${container.container}`}>
 
     </div>

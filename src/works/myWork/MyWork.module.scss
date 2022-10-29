@@ -1,3 +1,5 @@
+@import "../../common/styles/sass/variables";
+
 .myWorkBlock {
   width: 450px;
   display: flex;
@@ -27,7 +29,7 @@
 
   .myWorkInfo {
     padding: 25px 20px;
-    background: #434242;
+    background: $firstBgColor;
 
     h3 {
       margin: 0 0 20px;
