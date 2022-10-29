@@ -1,0 +1,13 @@
+.nav {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+a {
+    color: #aaaaaa;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}

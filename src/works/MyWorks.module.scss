@@ -1,0 +1,29 @@
+.myWorksBlock {
+  background-color: #4f4f4f;
+  padding: 100px 0;
+
+  .skillsContainer {
+    justify-content: flex-start;
+
+    .myWorks {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      align-items: start;
+      @media screen and (max-width: 624px) {
+        justify-content: center
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

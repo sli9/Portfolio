@@ -1,0 +1,15 @@
+
+.freelance {
+    text-align: center;
+}
+
+button {
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    background: transparent;
+    max-width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+    border: 2px solid #f47a65;
+}
