@@ -1,4 +1,5 @@
 @import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
 
 .myWorksBlock {
   background-color: $secondBgColor;
@@ -9,11 +10,10 @@
 
     .myWorks {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
+      @include setupFlex(start, space-between);
       flex-wrap: wrap;
       margin-top: 50px;
-      align-items: start;
+
       @media screen and (max-width: 624px) {
         justify-content: center
       }

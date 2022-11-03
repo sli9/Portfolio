@@ -1,0 +1,45 @@
+@import "../../common/styles/sass/mixins";
+@import "../../common/styles/sass/variables";
+
+
+.skillBlock {
+  font-family: "Poppins", sans-serif;;
+  width: 350px;
+  padding-left: 90px;
+  flex-direction: column;
+  @include setupFlex(center, center);
+  position: relative;
+  flex-wrap: wrap;
+  @media screen and (max-width: 968px) {
+    margin: 5px 5px;
+  }
+
+
+  .icon {
+    @include setupFlex(center, center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #292121d9;
+    font-size: 50px;
+    border-radius: 7px;
+    color: $accentColor;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-top: 0;
+    line-height: 1.8;
+  }
+
+}
+

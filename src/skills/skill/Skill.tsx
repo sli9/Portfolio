@@ -1,5 +1,7 @@
 import React from "react";
-import style from "./Skill.module.css"
+import style from "./Skill.module.scss"
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faJsSquare} from "@fortawesome/free-brands-svg-icons";
 
 type PropsType = {
     title: string
@@ -8,9 +10,11 @@ type PropsType = {
 
 const Skill = (props: PropsType) => {
     return <div className={style.skillBlock}>
-        <div className={style.icon}></div>
+        <div className={style.icon}>
+            <FontAwesomeIcon icon={faJsSquare}/>
+        </div>
         <h3>{props.title}</h3>
-        <span>{props.description}</span>
+        <p>{props.description}</p>
     </div>
 }
 
