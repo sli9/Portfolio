@@ -3,20 +3,19 @@
 
 .skillsBlock {
   background-color: $firstBgColor;
-  height: 100vh;
+  padding: 100px 0;
 
   .skillsContainer {
-    @include setupFlex(center, flex-start);
+    @media screen and (max-width: 1100px) {
+      justify-content: center;
+    }
 
     .skills {
-      margin-top: 20px;
+      margin-top: 50px;
       width: 100%;
-      @include setupFlex(flex-start, space-between);
+      @include setupFlex(start, space-between);
       flex-wrap: wrap;
-      @media screen and (max-width: 968px) {
-        justify-content: space-between;
-      }
-      @media screen and (max-width: 655px) {
+      @media screen and (max-width: 1100px) {
         justify-content: center;
       }
     }

@@ -5,9 +5,6 @@
   background-color: $secondBgColor;
   padding: 100px 0;
 
-  .skillsContainer {
-    justify-content: flex-start;
-
     .myWorks {
       width: 100%;
       @include setupFlex(start, space-between);
@@ -19,7 +16,7 @@
       }
     }
   }
-}
+
 
 
 

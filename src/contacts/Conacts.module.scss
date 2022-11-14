@@ -1,0 +1,15 @@
+@import "../common/styles/sass/mixins";
+@import "../common/styles/sass/variables";
+
+.contactsBlock {
+  background: $firstBgColor;
+  height: 100vh;
+  .freelance {
+
+    .form {
+      width: 100%;
+      @include setupFlex(center, center);
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -4,8 +4,7 @@ import Header from "./header/Header";
 import Main from "./main/Main";
 import Skills from "./skills/Skills";
 import MyWorks from "./works/MyWorks";
-import Freelance from "./freelance/Freelance";
-import Contacts from "./Contacts/Contacts";
+import Contacts from "./contacts/Contacts";
 
 function App() {
     return (
@@ -14,7 +13,6 @@ function App() {
             <Main/>
             <Skills/>
             <MyWorks/>
-            <Freelance/>
             <Contacts/>
         </div>
     );
