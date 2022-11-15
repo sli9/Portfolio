@@ -5,17 +5,28 @@
   background-color: $secondBgColor;
   padding: 100px 0;
 
-    .myWorks {
-      width: 100%;
-      @include setupFlex(start, space-between);
-      flex-wrap: wrap;
-      margin-top: 50px;
-
-      @media screen and (max-width: 624px) {
-        justify-content: center
-      }
+  .myWorksContainer {
+      @media screen and (max-width: 1175px) {
+        justify-content: center;
     }
   }
+
+
+  .myWorks {
+    width: 100%;
+    @include setupFlex(start, space-between);
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    @media screen and (max-width: 624px) {
+      justify-content: center
+    }
+    @media screen and (max-width: 1175px) {
+      justify-content: center;
+    }
+
+  }
+}
 
 
 

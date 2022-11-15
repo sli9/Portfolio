@@ -5,6 +5,13 @@
   width: 450px;
   display: flex;
   flex-direction: column;
+  margin: 0 10px;
+  border-radius: 7px 7px 0 0;
+  box-shadow: -17px -11px 28px 0px rgba(0, 0, 0, 0.31);
+
+  @media screen and (max-width: 1175px) {
+    margin: 10px 10px;
+  }
 
   .image {
     height: 300px;
@@ -13,6 +20,7 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    border-radius: 7px 7px 0 0;
 
     &::before {
       position: absolute;
@@ -27,16 +35,18 @@
     }
 
     &:hover {
-      &::before{
-      opacity: 0.4;
-        transition: opacity 0.3s linear;
-    }
+      &::before {
+        opacity: 0.4;
+        transition: opacity 0.2s linear;
+        border-radius: 7px 7px 0 0;
+      }
     }
   }
 
   .myWorkInfo {
     padding: 25px 20px;
     background: $firstBgColor;
+    border-radius: 0 0 7px 7px;
 
     h3 {
       margin: 0 0 20px;

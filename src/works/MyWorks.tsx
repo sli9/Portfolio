@@ -16,7 +16,7 @@ const MyWorks = () => {
     }
 
     return <div className={style.myWorksBlock}>
-        <div className={`${style.skillsContainer} ${container.container}`}>
+        <div className={`${style.myWorksContainer} ${container.container}`}>
 
             <Title text={'My works'}/>
 
