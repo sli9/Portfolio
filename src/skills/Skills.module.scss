@@ -6,8 +6,10 @@
   padding: 100px 0;
 
   .skillsContainer {
-    @media screen and (max-width: 1100px) {
-      justify-content: center;
+    div {
+      @media screen and (max-width: 1100px) {
+        justify-content: center;
+      }
     }
 
     .skills {

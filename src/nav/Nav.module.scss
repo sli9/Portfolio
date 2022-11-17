@@ -1,0 +1,30 @@
+@import "../common/styles/sass/mixins";
+
+.nav {
+  border: 1px solid;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  @include setupFlex(center, flex-end);
+  z-index: 100;
+
+  .navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 70px;
+    }
+  }
+
+  a {
+    padding: 0 0.85em;
+    color: #aaaaaa;
+    text-decoration: none;
+  }
+}

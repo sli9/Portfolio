@@ -7,7 +7,10 @@ type PropsType = {
 
 const Title = ({text}: PropsType) => {
 
-    return <h2 className={style.title}>{text}</h2>
+    return <div className={style.titleBlock}>
+        <h2 className={style.title}>{text}</h2>
+        <p>{text}</p>
+    </div>
 
 }
 
