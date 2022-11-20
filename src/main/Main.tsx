@@ -1,9 +1,10 @@
 import React from "react";
 import style from "./Main.module.css"
 import container from "../common/styles/ContainerStyle.module.scss"
+import BGImage from "../assets/images/mainBackground.jpg"
 
 const Main = () => {
-    return <div className={style.mainBlock}>
+    return <section id={'home'} className={style.mainBlock} style={{backgroundImage: `url(${BGImage})`}}>
         <div className={container.container}>
             <div className={style.text}>
                 <h1>Я Селило Андрей</h1>
@@ -12,7 +13,7 @@ const Main = () => {
 
             </div>
         </div>
-    </div>
+    </section>
 }
 
 export default Main;

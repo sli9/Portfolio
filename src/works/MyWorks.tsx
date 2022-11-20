@@ -15,10 +15,10 @@ const MyWorks = () => {
         backgroundImage: `url(${todoPicture})`
     }
 
-    return <div className={style.myWorksBlock}>
+    return <section id={'projects'} className={style.myWorksBlock}>
         <div className={`${style.myWorksContainer} ${container.container}`}>
 
-            <Title text={'My works'}/>
+            <Title bgtext={'My works'} text={'Portfolio'}/>
 
             <div className={style.myWorks}>
                 <MyWork style={socialImg}
@@ -34,7 +34,7 @@ const MyWorks = () => {
 
             </div>
         </div>
-    </div>
+    </section>
 }
 
 export default MyWorks;

@@ -1,6 +1,6 @@
 .mainBlock {
     height: 100vh;
-    background-color: cornsilk;
+    background-size: contain;
 }
 
 .text {

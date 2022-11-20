@@ -7,10 +7,10 @@ import {faCss3, faGitSquare, faHtml5, faReact, faSass, faSquareJs} from "@fortaw
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Skills = () => {
-    return <div className={style.skillsBlock}>
+    return <section id={'skills'} className={style.skillsBlock}>
         <div className={`${style.skillsContainer} ${container.container}`}>
 
-            <Title text={'Skills'}/>
+            <Title bgtext={'Skills'} text={'What I know'}/>
 
             <div className={style.skills}>
                 <Skill title={'JS'}
@@ -59,7 +59,7 @@ const Skills = () => {
                 </Skill>
             </div>
         </div>
-    </div>
+    </section>
 }
 
 export default Skills;

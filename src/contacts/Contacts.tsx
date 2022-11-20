@@ -3,7 +3,7 @@ import style from "./Conacts.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
 
 const Contacts = () => {
-    return <div className={style.contactsBlock}>
+    return <section id={'contact'} className={style.contactsBlock}>
         <div className={`${style.freelance} ${container.container}`}>
             <h2>Contact</h2>
             <div className={style.form}>
@@ -26,7 +26,7 @@ const Contacts = () => {
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 }
 
 export default Contacts;

@@ -3,9 +3,10 @@
 
 .container {
   height: 100%;
-  width: 80%;
+  max-width: 80%;
   border: 1px solid;
   margin: 0 auto;
+  padding: 0 10px;
   @include setupFlex(center, space-between);
   flex-wrap: wrap;
   color: $textColor;
