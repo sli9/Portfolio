@@ -1,6 +1,7 @@
 .mainBlock {
     height: 100vh;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .text {
