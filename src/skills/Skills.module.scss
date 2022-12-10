@@ -2,8 +2,8 @@
 @import "../common/styles/sass/mixins";
 
 .skillsBlock {
-  background-color: $firstBgColor;
   padding: 100px 0;
+  height: 100vh;
 
   .skillsContainer {
     div {

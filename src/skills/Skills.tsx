@@ -14,7 +14,7 @@ const Skills = () => {
 
             <div className={style.skills}>
                 <Skill title={'JS'}
-                       description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor earum illo magni molestiae. Ab ?'}>
+                       description={'Lorem ipsum dolor sit amet, consgfgfffff ffggggggg ggggggg ggggffffffff fffffffggggg ggggectetur adipisicing elit. Commodi dolor earum illo magni molestiae. Ab ?'}>
                     <FontAwesomeIcon icon={faSquareJs}/>
                 </Skill>
                 <Skill title={'CSS'}

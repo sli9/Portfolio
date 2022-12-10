@@ -1,3 +1,23 @@
+@import "common/styles/sass/variables";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
+}
+
+.App {
+  section {
+    &:nth-child(n) {
+      background-color: $firstBgColor
+    }
+    &:nth-child(2n) {
+      background-color: $secondBgColor;
+    }
+  }
 }

@@ -2,8 +2,8 @@
 @import "../common/styles/sass/mixins";
 
 .myWorksBlock {
-  background-color: $secondBgColor;
   padding: 100px 0;
+  height: 100vh;
 
   .myWorksContainer {
     div {

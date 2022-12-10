@@ -1,11 +1,14 @@
 import React from "react";
 import style from "./Conacts.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
+import Title from "../common/components/title/Title";
 
 const Contacts = () => {
     return <section id={'contact'} className={style.contactsBlock}>
         <div className={`${style.freelance} ${container.container}`}>
-            <h2>Contact</h2>
+
+            <Title bgtext={'contact'} text={'Get in Touch'}/>
+
             <div className={style.form}>
                 <form>
                     <div>

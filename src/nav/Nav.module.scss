@@ -26,21 +26,22 @@
       display: flex;
       align-items: center;
       height: 70px;
-    }
-  }
 
-  a {
-    padding: 0 0.85em;
-    color: #aaaaaa;
-    text-decoration: none;
-    opacity: 0.7;
+      .active {
+        color: #ee6817;
+      }
 
-    &.active {
-      color: #ee6817;
-    }
+      a {
+        padding: 0 0.85em;
+        color: #aaaaaa;
+        text-decoration: none;
+        opacity: 0.7;
+        cursor: pointer;
+        &:hover{
+          color: #ee6817;
+        }
 
-    &:hover {
-      opacity: 1;
+      }
     }
   }
 }

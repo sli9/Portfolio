@@ -21,25 +21,10 @@
     background-repeat: no-repeat;
     position: relative;
     border-radius: 7px 7px 0 0;
-
-    &::before {
-      position: absolute;
-      content: '';
-      background: #000000;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      transition: opacity 0.3s linear;
-    }
+    transition: .5s ease-in-out;
 
     &:hover {
-      &::before {
-        opacity: 0.4;
-        transition: opacity 0.2s linear;
-        border-radius: 7px 7px 0 0;
-      }
+      filter: brightness(60%);
     }
   }
 
