@@ -75,7 +75,7 @@ const Nav = () => {
     return <nav className={`${style.nav} ${stickyStyle ? style.scrolled : ''}`}>
 
         <ul className={style.navList}>
-            <li><Link activeClass={`${stickyStyle && style.active}`}
+            <li><Link activeClass={`${stickyStyle || style.active}`}
                       to="home"
                       spy={true}
                       hashSpy={true}
