@@ -1,7 +1,6 @@
 @import "../common/styles/sass/mixins";
 
 .nav {
-  border: 1px solid;
   position: absolute;
   top: 0;
   width: 100%;
@@ -12,7 +11,7 @@
 
   &.scrolled {
     position: fixed;
-    background-color: #111;
+    background-color: #111418;
     animation-name: fadeUpDown;
     animation-duration: 1s;
   }

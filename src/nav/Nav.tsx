@@ -1,10 +1,20 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import style from "./Nav.module.scss"
 import {Link} from "react-scroll";
 
 const Nav = () => {
 
     const [stickyStyle, setStickyStyle] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (window.scrollY >= 200) {
+            setStickyStyle(true)
+            document.querySelector("nav ul li a")?.classList.remove(style.active)
+        } else {
+            document.querySelector("nav ul li a")?.classList.add(style.active)
+        }
+    }, [])
+
 
     /*<!--Highlight menu on scroll with IntersectionObserver-->*/
 
@@ -75,12 +85,13 @@ const Nav = () => {
     return <nav className={`${style.nav} ${stickyStyle ? style.scrolled : ''}`}>
 
         <ul className={style.navList}>
-            <li><Link activeClass={`${stickyStyle || style.active}`}
+            <li>
+                <Link activeClass={`${stickyStyle || style.active}`}
                       to="home"
                       spy={true}
                       hashSpy={true}
                       smooth={true}
-                      offset={-70}
+                      offset={-60}
                       duration={500}
                       onSetActive={() => {
                           setStickyStyle(false)
@@ -88,32 +99,39 @@ const Nav = () => {
                       onSetInactive={() => {
                           setStickyStyle(true)
                       }
-                      }
-            >Home</Link></li>
-            <li><Link activeClass={style.active}
+                      }>Home
+                </Link>
+            </li>
+            <li>
+                <Link activeClass={style.active}
                       to="skills"
                       spy={true}
                       hashSpy={true}
                       smooth={true}
-                      offset={-70}
-                      duration={500}
-            >Skills</Link></li>
-            <li><Link activeClass={style.active}
+                      offset={-60}
+                      duration={500}>Skills
+                </Link>
+            </li>
+            <li>
+                <Link activeClass={style.active}
                       to="projects"
                       spy={true}
                       hashSpy={true}
                       smooth={true}
-                      offset={-70}
-                      duration={500}
-            >Projects</Link></li>
-            <li><Link activeClass={style.active}
+                      offset={-60}
+                      duration={500}>Projects
+                </Link>
+            </li>
+            <li>
+                <Link activeClass={style.active}
                       to="contact"
                       spy={true}
                       hashSpy={true}
                       smooth={true}
-                      offset={-70}
-                      duration={500}
-            >Contact</Link></li>
+                      offset={0}
+                      duration={500}>Contact
+                </Link>
+            </li>
         </ul>
     </nav>
 }

@@ -19,19 +19,59 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
     border-radius: 7px 7px 0 0;
-    transition: .5s ease-in-out;
+    position: relative;
 
-    &:hover {
-      filter: brightness(60%);
+    &::before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      font-family: 'Oswald', sans-serif;
+      position: absolute;
+      content: 'go to site';
+      font-size: 50px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 7px 7px 0 0;
+      color: rgb(255, 255, 255);
+      line-height: 300px;
+      opacity: 0;
+      transition: .5s ease-in-out;
     }
+    &:hover:before {
+      opacity: 1;
+    }
+
   }
 
   .myWorkInfo {
     padding: 25px 20px;
     background: $firstBgColor;
     border-radius: 0 0 7px 7px;
+    color: $textColor;
+    position: relative;
+
+    &::before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      font-family: 'Oswald', sans-serif;
+      position: absolute;
+      content: 'go to code';
+      font-size: 50px;
+      text-align: right;
+      padding-right: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0 0 7px 7px;
+      color: rgba(216 216 199 / 12%);
+      opacity: 0;
+      transition: .5s ease-in-out;
+    }
+    &:hover:before {
+      opacity: 1;
+    }
 
     h3 {
       margin: 0 0 20px;

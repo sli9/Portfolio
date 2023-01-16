@@ -22,14 +22,16 @@ const MyWorks = () => {
 
             <div className={style.myWorks}>
                 <MyWork style={socialImg}
-                        link={'https://github.com/sli9/Setka'}
+                        codeLink={'https://github.com/sli9/Setka'}
+                        siteLink={'https://sli9.github.io/Setka/'}
                         title={'Social network'}
-                        description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dolor earum illo magni molestiae. Ab ?'}
+                        description={'React, Redux, RestAPI, TS, Thunk, Ant design, Redux Form'}
                 />
                 <MyWork style={todoImg}
-                        link={'https://github.com/sli9/Todolist'}
+                        codeLink={'https://github.com/sli9/Todolist'}
+                        siteLink={'https://sli9.github.io/Todolist/'}
                         title={'Todolist'}
-                        description={' Loremconsectetur adipisicing elit. Commodi dolor earum illo magni molestiae. Ab ?'}
+                        description={'React, Redux toolkit, TS, RestAPI, Thunk, Material UI, Unit Tests, formik'}
                 />
 
             </div>

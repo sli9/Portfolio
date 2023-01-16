@@ -1,0 +1,15 @@
+@import "../common/styles/sass/variables";
+
+.footer {
+
+  .container {
+
+    background-color: $firstBgColor;
+  }
+
+  .footerText {
+    text-align: center;
+    height: 100%;
+    padding: 20px 0;
+  }
+}

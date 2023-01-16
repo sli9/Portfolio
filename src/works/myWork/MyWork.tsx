@@ -5,20 +5,22 @@ type PropsType = {
     title: string
     description: string
     style: { backgroundImage: string }
-    link: string
+    codeLink: string
+    siteLink: string
 }
 
 const MyWork = (props: PropsType) => {
     return <div className={style.myWorkBlock}>
-
-        <a href={`${props.link}`} target='_blank'>
-            <div className={style.image} style={props.style}></div>
+        <a href={`${props.siteLink}`} target='_blank'>
+            <div className={style.image} style={props.style}/>
         </a>
 
-        <div className={style.myWorkInfo}>
-            <h3>{props.title}</h3>
-            <span>{props.description}</span>
-        </div>
+        <a href={`${props.codeLink}`} target='_blank'>
+            <div className={style.myWorkInfo}>
+                <h3>{props.title}</h3>
+                <span>{props.description}</span>
+            </div>
+        </a>
 
     </div>
 }
