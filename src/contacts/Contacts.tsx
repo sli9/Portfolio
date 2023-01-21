@@ -1,9 +1,28 @@
-import React from "react";
+import React, {FormEvent, useRef} from "react";
 import style from "./Conacts.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
 import Title from "../common/components/title/Title";
+import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
+
+    const form = useRef<HTMLFormElement | null>(null)
+
+    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_pvb3j7a', 'portfolio_iyeirg4', form.current as HTMLFormElement, 'XcHDBiyQwVq72FYRK')
+            .then((result) => {
+                if (result.text === 'OK') {
+                    alert('Your message has been send')
+                    form.current?.reset()
+                }
+            }, (error) => {
+                alert('Something goes wrong')
+                console.log(error.text)
+            });
+    };
+
     return <section id={'contact'} className={style.contactsBlock}>
         <div className={container.container}>
 
@@ -28,25 +47,25 @@ const Contacts = () => {
                 </div>
             </div>
 
-            <form className={style.contactForm}>
+            <form ref={form} onSubmit={sendEmail} className={style.contactForm}>
                 <div className={style.contactInputs}>
                     <div className={style.contactContent}>
-                        <input type={'email'} className={style.contactInput}/>
+                        <input type={'email'} name={'email'} className={style.contactInput}/>
                         <label className={style.contactLabel}>Email</label>
                         <span></span>
                     </div>
                     <div className={style.contactContent}>
-                        <input type={'text'} className={style.contactInput}/>
+                        <input type={'text'} name={'text'} className={style.contactInput}/>
                         <label className={style.contactLabel}>Subject</label>
                         <span></span>
                     </div>
                     <div className={style.contactContent} style={{height: '7rem'}}>
-                        <textarea className={style.contactInput}/>
+                        <textarea name={'message'} className={style.contactInput}/>
                         <label className={style.contactLabel}>Message</label>
                         <span></span>
                     </div>
                 </div>
-                <a className={style.btn}>Send Message</a>
+                <button className={style.btn}>Send Message</button>
             </form>
         </div>
     </section>
