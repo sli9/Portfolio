@@ -1,0 +1,24 @@
+@import '../../styles/sass/variables';
+
+.snackbar {
+  position: fixed;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $textColor;
+  z-index: 2;
+
+   & .symbol {
+     flex: 20%;
+   }
+   & .message {
+     flex: 80%;
+     text-align: start;
+   }
+}

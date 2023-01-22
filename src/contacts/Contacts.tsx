@@ -3,9 +3,11 @@ import style from "./Conacts.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
 import Title from "../common/components/title/Title";
 import emailjs from '@emailjs/browser';
+import {ShowSnackbarType, Snackbar} from "../common/components/snackbar/Snackbar";
 
 const Contacts = () => {
 
+    const snackRef = useRef<ShowSnackbarType>(null)
     const form = useRef<HTMLFormElement | null>(null)
 
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -14,11 +16,11 @@ const Contacts = () => {
         emailjs.sendForm('service_pvb3j7a', 'portfolio_iyeirg4', form.current as HTMLFormElement, 'XcHDBiyQwVq72FYRK')
             .then((result) => {
                 if (result.text === 'OK') {
-                    alert('Your message has been send')
+                    snackRef.current?.showSnackbar({type: 'success', message: 'Thanks! I answer as soon as possible'})
                     form.current?.reset()
                 }
             }, (error) => {
-                alert('Something goes wrong')
+                snackRef.current?.showSnackbar({type: 'fail', message: 'Something went wrong'})
                 console.log(error.text)
             });
     };
@@ -27,6 +29,8 @@ const Contacts = () => {
         <div className={container.container}>
 
             <Title bgtext={'contact'} text={'Get in Touch'}/>
+
+            <Snackbar ref={snackRef}/>
 
             <div className={style.contactBox}>
                 <div className={style.contactData}>
