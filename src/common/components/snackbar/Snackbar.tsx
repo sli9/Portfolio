@@ -19,7 +19,7 @@ export const Snackbar = forwardRef<ShowSnackbarType>((props, ref) => {
 
     useImperativeHandle(ref, () => {
         return {
-            showSnackbar(props) {debugger
+            showSnackbar(props) {
                 setType(props.type)
                 setMessage(props.message)
                 setVisibility(true)

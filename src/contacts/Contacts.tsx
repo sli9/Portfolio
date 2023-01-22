@@ -9,6 +9,7 @@ const Contacts = () => {
 
     const snackRef = useRef<ShowSnackbarType>(null)
     const form = useRef<HTMLFormElement | null>(null)
+    const ref = useRef(null)
 
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -29,7 +30,6 @@ const Contacts = () => {
         <div className={container.container}>
 
             <Title bgtext={'contact'} text={'Get in Touch'}/>
-
             <Snackbar ref={snackRef}/>
 
             <div className={style.contactBox}>
@@ -54,7 +54,7 @@ const Contacts = () => {
             <form ref={form} onSubmit={sendEmail} className={style.contactForm}>
                 <div className={style.contactInputs}>
                     <div className={style.contactContent}>
-                        <input type={'email'} name={'email'} className={style.contactInput}/>
+                        <input ref={ref} type={'email'} name={'email'} className={style.contactInput}/>
                         <label className={style.contactLabel}>Email</label>
                         <span></span>
                     </div>
@@ -69,7 +69,9 @@ const Contacts = () => {
                         <span></span>
                     </div>
                 </div>
-                <button className={style.btn}>Send Message</button>
+                <div className={style.btn}>
+                    <button>Send Message</button>
+                </div>
             </form>
         </div>
     </section>

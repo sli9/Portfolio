@@ -1,94 +1,118 @@
 @import "../common/styles/sass/variables";
 
-  .contactBox {
-    flex: 0 0 40%;
-    max-width: 40%;
+.contactBox {
+  flex: 0 0 40%;
+  max-width: 40%;
 
-    .contactData {
-      display: grid;
-      row-gap: 2rem;
+  .contactData {
+    display: grid;
+    row-gap: 2rem;
 
-      .contactSubtitle {
-        font-size: 1rem;
-        margin-bottom: 10px;
-      }
+    .contactSubtitle {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
 
-      .contactDescription {
-        display: inline-flex;
-        align-items: center;
-        column-gap: .7rem;
+    .contactDescription {
+      display: inline-flex;
+      align-items: center;
+      column-gap: .7rem;
 
-        i {
-          font-size: 1.2rem;
-        }
+      i {
+        font-size: 1.2rem;
       }
     }
   }
+}
 
-  .contactForm {
-    flex: 0 0 60%;
-    max-width: 60%;
+.contactForm {
+  flex: 0 0 60%;
+  max-width: 60%;
 
-    .contactInputs {
-      display: grid;
-      column-gap: 2rem;
-      margin-bottom: 1.5rem;
+  .contactInputs {
+    display: grid;
+    column-gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactContent {
+    position: relative;
+    height: 3rem;
+    border-bottom: 2px solid $textColor;
+    margin-bottom: 2rem;
+
+    .contactInput {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1rem 1rem 1rem 0;
+      background: none;
+      color: #fff;
+      outline: none;
+      border: none;
+      z-index: 1;
     }
 
-    .contactContent {
-      position: relative;
-      height: 3rem;
-      border-bottom: 2px solid $textColor;
-      margin-bottom: 2rem;
+    .contactLabel {
+      position: absolute;
+      top: -0.40rem;
+      width: 100%;
+      font-size: .9rem;
+      transition: .3s;
+    }
 
-      .contactInput {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 1rem 1rem 1rem 0;
-        background: none;
-        color: #fff;
-        outline: none;
-        border: none;
-        z-index: 1;
-      }
+    span {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      content: '';
+      height: 2px;
+      width: 0;
+      transition: 0.5s;
+      background-color: $accentColor;
+    }
 
-      .contactLabel {
-        position: absolute;
-        top: -0.40rem;
-        width: 100%;
-        font-size: .9rem;
-        transition: .3s;
-      }
+    textarea {
+      resize: none;
+    }
 
-      span {
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        content: '';
-        height: 2px;
-        width: 0;
-        transition: 0.5s;
-        background-color: $accentColor;
-      }
+    .contactInput:focus ~ span {
+      width: 100%;
+    }
 
-       textarea {
-        resize: none;
-      }
-
-      .contactInput:focus ~ span {
-        width: 100%;
-      }
-
-      .contactInput:focus + .contactLabel {
-        top: -1rem;
-        left: 0;
-        z-index: 10;
-        color: $accentColor;
-      }
+    .contactInput:focus + .contactLabel {
+      top: -1rem;
+      left: 0;
+      z-index: 10;
+      color: $accentColor;
     }
   }
+
+  .btn {
+    padding: 0.4rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    transition-duration: 0.4s;
+    transition-property: box-shadow, transform;
+
+    button {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: $textColor;
+    }
+
+    &:hover, &:focus, &:active {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+}
 
 
