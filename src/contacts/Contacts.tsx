@@ -2,17 +2,17 @@ import React, {FormEvent, useRef} from "react";
 import style from "./Conacts.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
 import Title from "../common/components/title/Title";
-import emailjs from '@emailjs/browser';
 import {ShowSnackbarType, Snackbar} from "../common/components/snackbar/Snackbar";
+import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
 
     const snackRef = useRef<ShowSnackbarType>(null)
     const form = useRef<HTMLFormElement | null>(null)
-    const ref = useRef(null)
 
     const sendEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
 
         emailjs.sendForm('service_pvb3j7a', 'portfolio_iyeirg4', form.current as HTMLFormElement, 'XcHDBiyQwVq72FYRK')
             .then((result) => {
@@ -51,20 +51,22 @@ const Contacts = () => {
                 </div>
             </div>
 
-            <form ref={form} onSubmit={sendEmail} className={style.contactForm}>
+            <form name={'contactForm'} ref={form} onSubmit={sendEmail} className={style.contactForm}>
                 <div className={style.contactInputs}>
                     <div className={style.contactContent}>
-                        <input ref={ref} type={'email'} name={'email'} className={style.contactInput}/>
+                        <input type={'text'} name={'name'}
+                               className={style.contactInput} required
+                               minLength={3} maxLength={50}/>
+                        <label className={style.contactLabel}>Your name</label>
+                        <span></span>
+                    </div>
+                    <div className={style.contactContent}>
+                        <input type={'email'} name={'email'} className={style.contactInput} required/>
                         <label className={style.contactLabel}>Email</label>
                         <span></span>
                     </div>
-                    <div className={style.contactContent}>
-                        <input type={'text'} name={'text'} className={style.contactInput}/>
-                        <label className={style.contactLabel}>Subject</label>
-                        <span></span>
-                    </div>
                     <div className={style.contactContent} style={{height: '7rem'}}>
-                        <textarea name={'message'} className={style.contactInput}/>
+                        <textarea name={'message'} className={style.contactInput} required maxLength={2000}/>
                         <label className={style.contactLabel}>Message</label>
                         <span></span>
                     </div>
