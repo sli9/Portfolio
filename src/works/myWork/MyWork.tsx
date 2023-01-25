@@ -11,7 +11,7 @@ type PropsType = {
 
 const MyWork = (props: PropsType) => {
     return <div className={style.myWorkBlock}>
-        <a href={`${props.siteLink}`} target='_blank'>
+        <a href={`${props.siteLink}`} target='_blank' rel={"noopener noreferrer"}>
             <div className={style.image} style={props.style}/>
         </a>
 

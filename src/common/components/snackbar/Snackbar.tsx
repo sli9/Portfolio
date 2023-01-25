@@ -25,7 +25,7 @@ export const Snackbar = forwardRef<ShowSnackbarType>((props, ref) => {
                 setVisibility(true)
                 setTimeout(() => {
                     setVisibility(false)
-                }, 3000)
+                }, 5000)
             }
         }
     })

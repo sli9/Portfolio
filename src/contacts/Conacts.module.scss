@@ -20,6 +20,7 @@
 
       i {
         font-size: 1.2rem;
+        color: $accentColor;
       }
     }
   }
@@ -78,15 +79,11 @@
       resize: none;
     }
 
-    //.contactInput:focus ~ span {
-    //  width: 100%;
-    //}
-
     .contactInput:valid ~ span {
       width: 100%;
     }
 
-    .contactInput:focus + .contactLabel {
+    .contactInput:focus +  .contactLabel {
       top: -1rem;
       left: 0;
       z-index: 10;
@@ -111,9 +108,16 @@
       color: $textColor;
     }
 
-    &:hover, &:focus, &:active {
+    &:has(button:disabled),
+    &:hover:has(button:disabled),
+    button:disabled {
+      opacity: 0.4;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);;
+      transform: none;
+    }
+
+    &:hover:not(:active) {
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      -webkit-transform: scale(1.1);
       transform: scale(1.1);
     }
   }

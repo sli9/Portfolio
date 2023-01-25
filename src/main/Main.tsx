@@ -17,6 +17,9 @@ const Main = () => {
                     eraseSpeed={100}
                     typingDelay={30}
                 />
+                <div className={style.downloadBtn}>
+                    <a href={`${window.location.origin}/Selilo_FE_DEV_CV.pdf`} download>Download CV</a>
+                </div>
             </div>
             <div className={style.photo}>
                 <Tilt options={{max: 25}}><img src={mainFoto} alt={'photo'}/></Tilt>
