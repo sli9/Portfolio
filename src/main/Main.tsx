@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Main.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
 import BGImage from "../assets/images/mainBackground.jpg"
-import mainFoto from "../assets/images/mainFoto.jpg"
+import mainFoto from "../assets/images/mainPhoto.jpg"
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from 'react-tilt'
 

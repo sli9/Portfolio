@@ -22,7 +22,7 @@ const Contacts = () => {
         emailjs.sendForm('service_pvb3j7a', 'portfolio_iyeirg4', form.current as HTMLFormElement, 'XcHDBiyQwVq72FYRK')
             .then((result) => {
                 if (result.text === 'OK') {
-                    snackRef.current?.showSnackbar({type: 'success', message: 'Thanks! I answer as soon as possible'})
+                    snackRef.current?.showSnackbar({type: 'success', message: `Thanks! I'll answer as soon as possible`})
                     form.current?.reset()
                     setIsDisabled(true)
                 }
@@ -33,7 +33,7 @@ const Contacts = () => {
     };
 
     return <section id={'contact'} className={style.contactsBlock}>
-        <div className={container.container}>
+        <div className={`${style.contactsContainer} ${container.container}`}>
 
             <Title bgtext={'contact'} text={'Get in Touch'}/>
             <Snackbar ref={snackRef}/>
@@ -44,7 +44,7 @@ const Contacts = () => {
                         <h3 className={style.contactSubtitle}>Call me</h3>
                         <span className={style.contactDescription}>
                             <i className="lni lni-phone"></i>
-                            +375292846599
+                            <a href={'tel:+375292846599'}>+375292846599</a>
                         </span>
                     </div>
                     <div className={style.information}>

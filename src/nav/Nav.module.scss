@@ -10,6 +10,10 @@
   @include setupFlex(center, flex-end);
   z-index: 100;
 
+  @media screen and (max-width: 1200px){
+    justify-content: center;
+  }
+
   &.scrolled {
     position: fixed;
     background-color: #111418;

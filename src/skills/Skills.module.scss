@@ -2,23 +2,31 @@
 @import "../common/styles/sass/mixins";
 
 .skillsBlock {
-  //padding: 100px 0;
-  //height: 100vh;
+
+  min-height: 100vh;
 
   .skillsContainer {
     div {
-      @media screen and (max-width: 1100px) {
+      @media screen and (max-width: 1200px) {
         justify-content: center;
       }
     }
 
     .skills {
-      //margin-top: 50px;
       width: 100%;
       @include setupFlex(start, space-between);
       flex-wrap: wrap;
-      @media screen and (max-width: 1100px) {
-        justify-content: center;
+
+      @media screen and (max-width: 1300px) {
+        margin-top: 100px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        justify-content: space-evenly;
+      }
+
+      @media screen and (max-width: 600px) {
+        margin-top: 0;
       }
     }
   }

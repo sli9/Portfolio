@@ -5,12 +5,13 @@
   min-height: 100vh;
   max-width: 80%;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 50px 10px;
   @include setupFlex(center, space-between);
   flex-wrap: wrap;
   color: $textColor;
-  @media screen and (max-width: 749px) {
-    justify-content: center;
+
+  @media screen and (max-width: 900px) {
+   max-width: 100%;
   }
 }
 
