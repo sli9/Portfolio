@@ -5,6 +5,7 @@ import {Link} from "react-scroll";
 const Nav = () => {
 
     const [stickyStyle, setStickyStyle] = useState<boolean>(false)
+    const [isActiveMenu, setIsActiveMenu] = useState<boolean>(false)
 
     useEffect(() => {
         if (window.scrollY >= 200) {
@@ -82,9 +83,10 @@ const Nav = () => {
     //     }
     // }
 
-    return <nav className={`${style.nav} ${stickyStyle ? style.scrolled : ''}`}>
+    return <nav className={`${style.nav} ${stickyStyle ? style.scrolled : ''}`}
+                style={isActiveMenu ? {backgroundColor: '#111418'} : {backgroundColor: "transparent"}}>
 
-        <ul className={style.navList}>
+        <ul className={`${style.navList} ${isActiveMenu ? style.active : ''}`}>
             <li>
                 <Link activeClass={`${stickyStyle || style.active}`}
                       to="home"
@@ -133,6 +135,12 @@ const Nav = () => {
                 </Link>
             </li>
         </ul>
+
+        <div className={`${style.headerBurger} ${ isActiveMenu ? style.active : ''}`}
+             onClick={() => setIsActiveMenu(!isActiveMenu)}>
+            <span></span>
+        </div>
+
     </nav>
 }
 
