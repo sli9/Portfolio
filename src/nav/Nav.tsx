@@ -83,8 +83,7 @@ const Nav = () => {
     //     }
     // }
 
-    return <nav className={`${style.nav} ${stickyStyle ? style.scrolled : ''}`}
-                style={isActiveMenu ? {backgroundColor: '#111418'} : {backgroundColor: "transparent"}}>
+    return <nav className={`${style.nav} ${stickyStyle ? style.scrolled : ''} ${isActiveMenu ? style.active : ''}`}>
 
         <ul className={`${style.navList} ${isActiveMenu ? style.active : ''}`}>
             <li>
@@ -130,7 +129,7 @@ const Nav = () => {
                       spy={true}
                       hashSpy={true}
                       smooth={true}
-                      offset={0}
+                      offset={-60}
                       duration={500}>Contact
                 </Link>
             </li>

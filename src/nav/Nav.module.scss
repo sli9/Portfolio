@@ -27,6 +27,10 @@
 
     @media screen and (max-width: 600px) {
       background-color: transparent;
+
+      &.active {
+        background-color: #111418;
+      }
     }
   }
 

@@ -62,13 +62,13 @@ const Contacts = () => {
                 <div className={style.contactInputs}>
                     <div className={style.contactContent}>
                         <input type={'text'} name={'name'} autoComplete={'off'}
-                               className={style.contactInput} required minLength={5}/>
+                               className={style.contactInput} required minLength={3}/>
                         <label className={style.contactLabel}>Your name</label>
                         <span></span>
                     </div>
                     <div className={style.contactContent}>
                         <input type={'email'} name={'email'} className={style.contactInput} required/>
-                        <label className={style.contactLabel}>Email</label>
+                        <label className={style.contactLabel}>Your email</label>
                         <span></span>
                     </div>
                     <div className={style.contactContent} style={{height: '7rem'}}>
