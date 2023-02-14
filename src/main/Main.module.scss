@@ -7,6 +7,12 @@
   position: relative;
   z-index: 1;
 
+  div {
+    @media screen and (max-width: 1200px) {
+      flex-direction: column-reverse;
+    }
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -93,8 +99,30 @@
   .photo {
     position: relative;
 
-    @media screen and (max-width: 1200px) {
-      display: none;
+    div {
+      width: 400px;
+      height: 500px;
+
+      @media screen and (max-width: 1300px) {
+        width: 320px;
+        height: 400px;
+      }
+      @media screen and (max-width: 1200px) {
+        width: 300px;
+        height: 300px;
+        margin-top: 25px;
+      }
+      @media screen and (max-width: 600px) {
+        width: 200px;
+        height: 200px;
+        margin-top: 50px;
+      }
+    }
+
+    &::before, &::after {
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
     }
 
     &::after {
@@ -102,8 +130,8 @@
       position: absolute;
       height: 80px;
       width: 80px;
-      border-bottom: 10px solid #ee6817;
-      border-right: 10px solid #ee6817;
+      border-bottom: 10px solid $accentColor;
+      border-right: 10px solid $accentColor;
       border-bottom-right-radius: 10px;
       right: -30px;
       bottom: -40px;
@@ -114,24 +142,29 @@
       position: absolute;
       height: 80px;
       width: 80px;
-      border-top: 10px solid #ee6817;
+      border-top: 10px solid $accentColor;
       border-top-left-radius: 10px;
-      border-left: 10px solid #ee6817;
+      border-left: 10px solid $accentColor;
       left: -30px;
       top: -40px;
     }
 
     img {
       margin: auto;
-      width: 25rem;
-      height: 33rem;
+      width: 100%;
+      height: 100%;
       border-radius: 5px;
 
-      @media screen and (max-width: 1300px) {
-        height: 25rem;
-        width: 20rem;
+      @media screen and (max-width: 1200px) {
+        border-radius: 50%;
+        border: 15px solid $firstBgColor;
+        box-shadow: 5px 7px 25px rgb(0 0 0 / 50%);
+      }
+      @media screen and (max-width: 600px) {
+        border: 10px solid $firstBgColor;
       }
     }
   }
 }
+
 
