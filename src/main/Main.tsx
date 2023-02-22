@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Main.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
 import BGImage from "../assets/images/mainBackground.jpg"
-import mainFoto from "../assets/images/mainPhoto.jpg"
+import mainPhoto from "../assets/images/mainPhoto.jpg"
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from 'react-tilt'
 
@@ -22,7 +22,7 @@ const Main = () => {
                 </div>
             </div>
             <div className={style.photo}>
-                <Tilt options={{max: 25}}><img src={mainFoto} alt={'photo'}/></Tilt>
+                 <Tilt options={{max: 25}}><img src={mainPhoto} alt={'photo'}/></Tilt>
             </div>
         </div>
     </section>
