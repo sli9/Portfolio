@@ -3,7 +3,7 @@ import style from "./MyWorks.module.scss"
 import container from "../common/styles/ContainerStyle.module.scss"
 import MyWork from "./myWork/MyWork";
 import Title from "../common/components/title/Title";
-import socialPicture from "../assets/images/_Social_media_.jpg"
+import socialPicture from "../assets/images/social_media_.jpg"
 import todoPicture from "../assets/images/todo-list.jpg"
 
 const MyWorks = () => {
